@@ -1,1 +1,83 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --niebieski: #5b9bd5;
+  --niebieski-jasny: #e8f1fa;
+  --niebieski-ciemny: #3a7bbf;
+  --szary-tlo: #f4f6f8;
+  --szary-ramka: #d9dee3;
+  --szary-tekst: #5f6b76;
+  --tekst: #2b3440;
+}
+
+body {
+  margin: 0;
+  padding: 32px 16px;
+  background: var(--szary-tlo);
+  color: var(--tekst);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+students {
+  display: block;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--niebieski-ciemny);
+  margin: 0 0 20px;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 14px;
+}
+
+p { margin: 0 0 12px; }
+
+button {
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  border: 1px solid var(--niebieski);
+  border-radius: 6px;
+  background: var(--niebieski);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+button:hover { background: var(--niebieski-ciemny); }
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: var(--szary-tekst);
+}
+
+input {
+  font: inherit;
+  padding: 7px 10px;
+  border: 1px solid var(--szary-ramka);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--tekst);
+}
+input:focus {
+  outline: none;
+  border-color: var(--niebieski);
+  box-shadow: 0 0 0 3px var(--niebieski-jasny);
+}
+
+app-add-student,
+app-edit-student {
+  display: block;
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid var(--szary-ramka);
+  border-radius: 10px;
+}

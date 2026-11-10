@@ -1,0 +1,23 @@
+export class Student {
+  constructor(
+    private _imie: string,
+    private _nazwisko: string,
+    private _wiek: number,
+    private _oceny: number[] = []
+  ) {}
+
+  get imie(): string { return this._imie; }
+  set imie(value: string) { this._imie = value; }
+
+  get nazwisko(): string { return this._nazwisko; }
+  set nazwisko(value: string) { this._nazwisko = value; }
+
+  get wiek(): number { return this._wiek; }
+  set wiek(value: number) { this._wiek = value; }
+
+  get oceny(): number[] { return this._oceny; }
+
+  dodajOcene(ocena: number): void {
+    this._oceny.push(ocena);
+  }
+}

@@ -1,0 +1,11 @@
+<h3>Edycja: {{ student.imie }} {{ student.nazwisko }}</h3>
+<p><label>Imię: <input [(ngModel)]="student.imie" /></label></p>
+<p><label>Nazwisko: <input [(ngModel)]="student.nazwisko" /></label></p>
+<p><label>Wiek: <input type="number" [(ngModel)]="student.wiek" /></label></p>
+
+<p>Oceny: {{ student.oceny.join(', ') }}</p>
+<p>
+  <input type="number" min="2" max="5" step="0.5" [(ngModel)]="nowaOcena" />
+  <button (click)="dodajOcene()">Dodaj ocenę</button>
+</p>
+<button (click)="zamknij.emit()">Zamknij</button>
